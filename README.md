@@ -7,8 +7,10 @@ Lab 2, "1001" Moore Detector
 This code was made in Verilog.
 
 == Purpose ==
-Detect 1001 code in a Moore machine.
+Detect 1001 code in a Moore machine using Verilog.
 
 == Files ==
-1. Verilog Code for 1001 Moore Machine Detector
-2. Testbench for 1001 Moore Machien Detector
+1. State Diagram for a Moore Machine that detects '1001'.
+2. Verilog Code for 1001 Moore Machine Detector.
+3. Testbench for 1001 Moore Machien Detector
+4. Screenshot of ModelSim
