@@ -19,7 +19,7 @@ module sd1001_moore_testbench();
     in <= 0;
     
     repeat (5) @ (posedge clk);
-    reset <= 0;
+    reset <= 0; //makes so clock isn't staying at 1 continously 
 	 
     for (i = 0 ; i < loop; i = i + 1) 
 	 begin
@@ -27,6 +27,7 @@ module sd1001_moore_testbench();
       repeat (l_dly) @ (posedge clk);
       tb_in = $random;
       in <= tb_in;
+		
     end
 
     #100 $finish;
@@ -35,9 +36,4 @@ module sd1001_moore_testbench();
   always @ (posedge clk) begin
     $strobe ("T=%0t in=%0b out=%0b", $time, in, out);
   end
-  
-  initial begin
-    $dumpvars;
-    $dumpfile("dump.vcd");
-  end  
 endmodule
