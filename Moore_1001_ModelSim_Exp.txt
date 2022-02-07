@@ -1,0 +1,4 @@
+The simulation shows the values 
+being a high when the desired states 
+(S0: 0, S1: 1, S2: 10, S3: 100, S4: 1001)
+are detected, showing that the logic is working.
