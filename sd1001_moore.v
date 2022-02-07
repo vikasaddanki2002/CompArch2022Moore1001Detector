@@ -2,11 +2,11 @@ module sd1001_moore(input clk,
                    input  reset,
                    input  din,
                    output reg[1:0] dout);
-	parameter  	S0 = 4'b0000, 		// "Zero" State
-				   S1 = 4'b0001, 		// "One" State
-					S2 = 4'b0010, 		// "OneZero" State
-					S3 = 4'b0100, 		// "OnceZeroZero" State
-					S4 = 4'b1001;		// "OneZeroZeroOne" State
+	parameter  	S0 = 4'b0000, 				// "0" State
+				   S1 = 4'b0001, 		// "1" State
+					S2 = 4'b0010, 		// "10" State
+					S3 = 4'b0100, 		// "100" State
+					S4 = 4'b1001;		// "1001" State
 					
   reg [4:0] state;
 
@@ -52,7 +52,7 @@ module sd1001_moore(input clk,
           else
             state <= S0;
         end
-		        endcase
+	endcase
     end
   end
 endmodule
