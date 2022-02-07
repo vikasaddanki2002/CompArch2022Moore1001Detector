@@ -19,12 +19,7 @@ module sd1001_moore_testbench();
     in <= 0;
     
     repeat (5) @ (posedge clk);
-    reset <= 1;
-
-
-    // Or random stimulus using a for loop that drives a random
-    // value of input N times, but there is lesser chance to hit
-    // this pattern
+    reset <= 0;
 	 
     for (i = 0 ; i < loop; i = i + 1) 
 	 begin
@@ -32,8 +27,6 @@ module sd1001_moore_testbench();
       repeat (l_dly) @ (posedge clk);
       tb_in = $random;
       in <= tb_in;
-		
-		//u0.always(clk, reset);
     end
 
     #100 $finish;
